@@ -23,6 +23,7 @@
 }
 
 $red: #DB6161;
+$gray: #C5AAA4;
 
 body {
 	background: rgb(235, 238, 243);
@@ -87,6 +88,18 @@ body {
 			color: $red;
 		}
 	}
+
+	#score_buttons{
+		padding: 15px 5%;
+	}
+
+	p.description {
+		padding: 15px 5%;
+		font-size: 15px;
+		color: $gray;
+		display: inline-block;
+	}
+
 }
 
 #recipe_top {

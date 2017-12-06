@@ -20,6 +20,8 @@ gem 'jquery-rails'
 gem 'paperclip', "~> 5.1.0"
 gem "cocoon", "~> 1.2.11"
 gem "devise", "~> 4.3.0"
+gem 'bcrypt', '~> 3.1.11'
+gem 'acts_as_votable', '~> 0.11.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

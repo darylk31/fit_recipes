@@ -39,6 +39,18 @@ class RecipesController < ApplicationController
 		redirect_to root_path, notice: "Successfully deleted recipe"
 	end
 
+	def upvote
+		@recipe = Recipe.find(params[:id])
+		@recipe.upvote_by current_user
+		redirect_back(fallback_location: root_path)
+	end
+
+	def downvote
+		@recipe = Recipe.find(params[:id])
+		@recipe.disliked_by current_user
+		redirect_back(fallback_location: root_path)
+	end
+
 	private
 
 	def recipe_params
@@ -48,4 +60,7 @@ class RecipesController < ApplicationController
 	def find_recipe
 		@recipe = Recipe.find(params[:id])
 	end
+
+
+
 end

@@ -1,5 +1,8 @@
-class Recipe < ApplicationRecord
-  has_many :ingredients
+class Recipe < ActiveRecord::Base
+	acts_as_votable
+	belongs_to :user
+
+	has_many :ingredients
 	has_many :directions
 
 	accepts_nested_attributes_for :ingredients,
