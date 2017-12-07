@@ -9,6 +9,12 @@
 				%p
 					Submitted by
 					= @recipe.user.email
+		.col-md-12
+			#score_buttons
+				= link_to "Like", like_recipe_path(@recipe), method: :put, class: "btn btn-success"
+				= link_to "Dislike", dislike_recipe_path(@recipe), method: :put, class: "btn btn-danger"
+				= @recipe.weighted_score
+				%td= "(Votes: #{@recipe.votes_for.size})"
 
 	.row
 		.col-md-6
